@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XamarinSQLite"
+             x:Class="TPFinal.MainPage">
+
+    <StackLayout>
+        <StackLayout>
+            <StackLayout Padding="10,10,10,10" HorizontalOptions="Center" VerticalOptions="Start">
+                
+                <Label Margin="0,10,0,10" Text="Cadastro de Produtos" FontAttributes="Bold" FontSize="Large" TextColor="Red" HorizontalTextAlignment="Center" ></Label>
+                
+
+
+                <StackLayout  HorizontalOptions="StartAndExpand"  Orientation="Horizontal">
+                    <Entry x:Name="txtId" Placeholder="ID de cadastro" WidthRequest="50"></Entry>
+                    <Entry x:Name="txtNomeMercadoria" Placeholder="Nome da Mercadoria" WidthRequest="230"></Entry>
+                    <Entry x:Name="txtPeso" Placeholder="Peso" WidthRequest="90"></Entry>
+                </StackLayout>
+
+                <Entry x:Name="txtNomeProdutor" Placeholder="Nome do Produtor"></Entry>
+                <Entry x:Name="txtProdutorEmail" Placeholder="E-mail do Produtor"></Entry>
+                <Entry x:Name="txtNCM" Placeholder="NCM"></Entry>
+                <StackLayout  HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+                    <Button x:Name="btnAdd" WidthRequest="160" Text="Criar" Clicked="BtnAdd_Clicked" />
+                    <Button x:Name="btnRead" WidthRequest="160" Text="Ler" Clicked="BtnRead_Clicked" />
+                </StackLayout>
+                <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+                    <Button x:Name="btnUpdate" WidthRequest="160" Text="Atualizar" Clicked="BtnUpdate_Clicked"/>
+                    <Button x:Name="btnDelete" WidthRequest="160" Text="Deletar" Clicked="BtnDelete_Clicked" />
+                </StackLayout>
+                <ListView x:Name="lstBooks">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextCell Text="{Binding NomeMercadoria }" Detail="{Binding Id}"></TextCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <Button x:Name="btnLocalizacao" Text="Minha Localização" Clicked="BtnLocalizacao_Clicked"/>
+            </StackLayout>
+        </StackLayout>
+        <Label Margin="0,6,0,10" Text="Créditos" FontAttributes="Bold" FontSize="Small" TextColor="Red" HorizontalTextAlignment="Center" ></Label>
+        <Label Margin="0,6,0,10" Text="Ketheleen Cristine Simão" FontAttributes="Bold" FontSize="Small" TextColor="Red" HorizontalTextAlignment="Center" ></Label>
+        <Label Margin="0,6,0,10" Text="Luiz Carlos Mendes" FontAttributes="Bold" FontSize="Small" TextColor="Red" HorizontalTextAlignment="Center" ></Label>
+    </StackLayout>
+            
+</ContentPage>
